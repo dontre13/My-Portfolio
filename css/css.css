@@ -1,0 +1,496 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #ffffff;
+    color: rgb(17, 17, 17);
+}
+
+#BgImage{
+    width: 100%;
+    height: 80vh;
+    background-image: url(../images/DWagner_Character.png);
+    background-position: 90% -10%;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size: auto 110%;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+
+/********************Nav Menu*******************/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#logo{
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    width: 380px;
+    height: 200px;
+}
+
+
+h1{
+    font-size: 40px;
+}
+
+
+h1 span{
+    color: #0a6a9c;
+}
+
+#sidemenu li a{
+    top: -50px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #0a6a9c;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.08px rgb(255, 255, 255);
+
+
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #0a6a9c;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/********************Header Text*******************/
+
+
+#headerText{
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+#headerText p span{
+    color: #0a6a9c;
+}
+
+#headerText h1{
+    margin-top: 20px;
+}
+
+
+
+/********************About Me *******************/
+
+
+.change{
+	color: #0A6A9C;
+	font-weight: bolder;
+	font-size:25px;
+}
+
+#about{
+    padding: 40px 0;
+    color: #ababab;
+	font-weight: normal;
+    line-height: 200%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pic{
+    flex-basis: 35%;
+}
+
+.pic img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.aboutMe{
+    flex-basis: 60%;
+}
+
+.aboutMe h1{
+    margin-bottom: 20px;
+}
+
+.titles{
+    display: flex;
+    margin: 20px 0px 30px;
+    
+}
+
+.links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative; 
+}
+
+.links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #0a6a9c;
+    position: absolute; 
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.links.blueLine::after{
+    width: 50%;
+}
+.content{
+    color: black;
+}
+.content ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.content{
+    display:none;
+}
+
+.content.activeContent{
+    display: block;
+}
+
+
+/********************Services*******************/
+
+h1{
+    margin-bottom: 20px;
+}
+
+#services{
+    padding: 30px 0;
+    color: white;
+}
+
+.container h1{
+    color: black;
+}
+
+input, textarea{
+    color: white;
+}
+
+.servicesList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.servicesList div{
+    background: #262626;
+    padding:40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.servicesList div i{
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.servicesList div h2{
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.servicesList div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.servicesList div:hover{
+    background-color: #0a6a9c;
+    transform: translateY(-10px);
+}
+
+/********************End of Services*******************/
+
+/********************Portfolio*******************/
+#portfolio{
+    padding: 50px 0;
+    color: white;
+}
+
+.workList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 70px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius:10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    height: 450px;
+    border-radius:10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+
+#img1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(246, 246, 246, 0.381), #0a6a9c);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #0a6a9c;;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    text-decoration: none;
+    padding: 14px 50px;
+    color: #0a6a9c;
+    border: 1px solid #0a6a9c;
+    width: fit-content;
+    border-radius: 6px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #0a6a9c;
+    color: white;
+}
+/********************End of Portfolio*******************/
+
+
+
+/********************Contact Me*******************/
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+   flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #0a6a9c;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #0a6a9c;
+    color: white;
+}
+
+.contact-right form{
+    width:100%
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+}
+/********************End of Contact Me*******************/
+
+/********************responsive layout*******************/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 700px){
+    .container{
+        padding: 0 10%;
+    }
+    
+    #BgImage{
+        background-image: url(../images/DWagner_Character.png);
+        width: 100%;
+        height: 80vh;
+        background-position: 90% -60%;
+        background-repeat:  no-repeat;
+        background-size: auto 110%;
+        object-fit: cover;
+  
+    }
+    
+    #logo{
+        background-image: url(../images/Logo.png);
+        
+    } 
+    nav{
+        background: white;
+        height: 120px;
+        position: relative;
+    }
+    #sidemenu li a{
+        color: white;
+        top: 0;
+    }
+    #headerText{
+        margin-top: 100%;
+        font-size: 16px;
+        
+    }
+    i#openmenu.fa-solid.fa-bars{
+        z-index: 2;
+        top: 30px;
+        position: absolute;
+        right: -10px;
+        top: 50px;
+        color: #0a6a9c
+  
+
+    }
+
+    #headerText h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: inline;
+        font-size: 25px;
+        
+    }
+    nav ul{
+        background: #0a6a9c;       
+        position: fixed;
+        top: 0;
+        right:-200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        color: white;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+   
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    #about{
+        padding: 0 0 50px 0;
+    }
+    .pic{
+        flex-basis: 50%;
+        width: 50%;
+        margin: 20% auto;
+    }
+    .contact-left{
+        margin-bottom: 40px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+
+}
+
