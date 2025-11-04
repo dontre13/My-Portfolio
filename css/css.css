@@ -38,7 +38,6 @@ nav{
 }
 
 #logo{
-    background-image: url(../images/logo.png);
     background-repeat: no-repeat;
     width: 380px;
     height: 200px;
@@ -414,10 +413,7 @@ nav .fa-solid{
   
     }
     
-    #logo{
-        background-image: url(../images/Logo.png);
-        
-    } 
+    
     nav{
         background: white;
         height: 120px;
