@@ -13,7 +13,9 @@
         <div id ="BgImage">
             <div class="container">
                 <nav>
-                    <div id = "logo"></div>
+                    <div id = "logo">
+                        <img src = "../images/logo.png">
+                    </div>
                     <ul id="sidemenu">
                         <li><a href="#BgImage">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -116,7 +118,7 @@
                     <div class="layer">
                         <h3> Pokemon API </h3>
                         <p> Here I have a Pokemon card project that utilizes fetch requests thru an Pokemon API server. This project allow you to search for pokemone and it will display the name and all its data of the pokemon. </p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="#" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -124,7 +126,7 @@
                     <div class="layer">
                         <h3> Example project 2 App </h3>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="#" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -132,7 +134,7 @@
                     <div class="layer">
                         <h3> Example project 3 App </h3>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="#" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                     
                 </div>
@@ -176,5 +178,11 @@
 -create a link to other projects when clicked
 
 
+RewriteEngine on 
 
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} \.html -f
+
+RewriteRule ^(.*)$ $1.html [NC, L]
 ------------------------------------------------>
