@@ -17,8 +17,9 @@ body{
 #BgImage{
     width: 100%;
     height: 80vh;
+    
     background-image: url(../images/DWagner_Character.png);
-    background-position: 90% -10%;
+    background-position: 90% -90%;
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size: auto 110%;
@@ -35,12 +36,25 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    right: 0;
+    transition: box-shadow 0.3s ease;
+}
+
+nav.activate{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #logo{
     background-repeat: no-repeat;
     width: 380px;
-    height: 200px;
+    height: auto;
+    background-color: white;
+    margin-left: 9.4%;
 }
 
 
@@ -53,9 +67,10 @@ h1 span{
     color: #0a6a9c;
 }
 
-#sidemenu li a{
-    top: -50px;
+#sidemenu{
+    margin-right: 9%;
 }
+
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -69,6 +84,7 @@ nav ul li a {
     position: relative;
     font-weight: bolder;
     -webkit-text-stroke: 0.08px rgb(255, 255, 255);
+    font-size: 1.1em;
 
 
 }
@@ -93,8 +109,11 @@ nav ul li a:hover::after{
 
 
 #headerText{
-    margin-top: 10%;
+    margin-top: 300px;
     font-size: 20px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    position: relative;
+    
 }
 
 #headerText p span{
@@ -105,6 +124,17 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 
+#headerText .btn{
+    position: absolute;
+    margin-left: 10%;
+    text-shadow: none;
+    padding: 14px 30px;
+    margin: 10px 0 10px 0;
+}
+
+#about, #services, #portfolio, #contact{
+    scroll-margin-top: 100px;
+}
 
 
 /********************About Me *******************/
@@ -121,6 +151,7 @@ nav ul li a:hover::after{
     color: #ababab;
 	font-weight: normal;
     line-height: 200%;
+    
 }
 
 .row{
@@ -140,6 +171,11 @@ nav ul li a:hover::after{
 
 .aboutMe{
     flex-basis: 60%;
+    
+}
+
+.aboutMeInfo{
+    margin-bottom: 50px;
 }
 
 .aboutMe h1{
@@ -261,10 +297,13 @@ input, textarea{
 .workList{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 70px;
+    grid-gap: 2%;
     margin-top: 50px;
 }
 
+.workList a{
+    color: white;
+}
 .work{
     border-radius:10px;
     position: relative;
@@ -277,6 +316,7 @@ input, textarea{
     border-radius:10px;
     display: block;
     transition: transform 0.5s;
+    object-fit: cover;
 
 }
 
@@ -343,6 +383,7 @@ input, textarea{
     width: fit-content;
     border-radius: 6px;
     transition: background 0.5s;
+    background-color: white;
 }
 
 .btn:hover{
@@ -397,9 +438,23 @@ nav .fa-solid{
     display: none;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1031px){
+    nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 5px;
+    
+    }
+
+    
+
+
+}
+
+
+@media only screen and (max-width: 840px){
     .container{
-        padding: 0 10%;
+        padding: 0;
     }
     
     #BgImage{
@@ -413,27 +468,52 @@ nav .fa-solid{
   
     }
     
-    
+    #logo{
+        width: auto;
+        margin-left: 0;
+    }
+    #logo img{
+        width: 80%;
+        height: auto;
+    }
     nav{
         background: white;
         height: 120px;
-        position: relative;
+        position: fixed;
+        width: 100%;
+        padding: 0 10%;
+        transition: box-shadow 0.3s ease;
+        display: flex;
     }
+
+    nav.activate{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+    #sidemenu{
+        margin-right: 0;
+    }
+
     #sidemenu li a{
         color: white;
         top: 0;
+        
+        
     }
     #headerText{
-        margin-top: 100%;
+        top: 350px;
+        margin-top: 0;
         font-size: 16px;
+        padding: 20px 10%;
+        
         
     }
     i#openmenu.fa-solid.fa-bars{
         z-index: 2;
-        top: 30px;
         position: absolute;
-        right: -10px;
-        top: 50px;
+        top: 35%;
+        right: 10%;
         color: #0a6a9c
   
 
@@ -471,8 +551,26 @@ nav .fa-solid{
         left: 25px;
         cursor: pointer;
     }
+
     #about{
-        padding: 0 0 50px 0;
+        scroll-margin-top: 50px;
+        padding: 20px 10%;
+
+}
+    #services, #portfolio, #contact{
+        scroll-margin-top: 120px;
+        padding: 20px 10%;
+    }
+
+    .aboutMe{
+        flex-basis: 100%;
+    
+}
+
+    #about{
+        
+        padding: 0 10%;
+
     }
     .pic{
         flex-basis: 50%;
@@ -487,6 +585,10 @@ nav .fa-solid{
         flex-basis: 100%;
     }
 
+    #img3{
+        margin-bottom: 50px;
+    }
+    
 
 }
 

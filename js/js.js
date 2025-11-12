@@ -1,14 +1,13 @@
+//Skills, Experience, Education
+
 let tablinks = document.getElementsByClassName('links');
 let tabcontents = document.getElementsByClassName('content');
 let skillsTab = document.getElementById('skills_tab');
 let experienceTab = document.getElementById('experience_tab');
 let educationTab = document.getElementById('education_tab');
-
 let mySkills = document.getElementById('skills_content');
 let myExperience = document.getElementById('experience_content');
 let myEducation = document.getElementById('education_content');
-
-
 
 function myFunction(blah){
     for(tablink of tablinks){
@@ -39,7 +38,7 @@ educationTab.addEventListener("click", (event) => {
 });
 
 
-
+//responsive ham menu
 let sidemenu = document.querySelector('#sidemenu');
 let closemenu1 = document.getElementById('closemenu')
 let openmenu1 = document.getElementById('openmenu')
@@ -56,3 +55,16 @@ function closemenu(){
 
 openmenu1.addEventListener('click', openmenu)
 closemenu1.addEventListener('click', closemenu)
+
+
+
+//navbar scroll
+window.addEventListener('scroll', ()=>{
+    const navbar = document.querySelector('nav');
+
+    if(window.scrollY > 0){
+        navbar.classList.add('activate');
+    }else{
+        navbar.classList.remove('activate')
+    }
+})
