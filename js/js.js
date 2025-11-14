@@ -58,6 +58,19 @@ closemenu1.addEventListener('click', closemenu)
 
 
 
+//closes menu if clicked outside of menu
+document.addEventListener('click', function(e) {
+    const isClickInsideMenu = sidemenu.contains(e.target);
+    const isClickOnOpenBtn = openmenu1.contains(e.target);
+
+    // if menu is open AND click is outside AND not on hamburger icon
+    if (!isClickInsideMenu && !isClickOnOpenBtn && sidemenu.style.right === '0px') {
+        closemenu();
+    }
+});
+
+
+
 //navbar scroll
 window.addEventListener('scroll', ()=>{
     const navbar = document.querySelector('nav');
